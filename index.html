@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Gloss Landing Page — Session Summary</title>
+<style>
+  :root {
+    --ink: #0D0D0D;
+    --paper: #F7F5F0;
+    --text-2: #55534C;
+    --hairline: #E4E1D8;
+    --accent: #D93815;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+  }
+  .meta {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    margin: 0 0 3rem;
+  }
+  .meta code {
+    background: var(--hairline);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 3rem 0 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--hairline);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin: 0 0 1rem; }
+  ol, ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.9rem; }
+  strong { color: var(--ink); }
+  code {
+    background: var(--hairline);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+  pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+  pre code { background: none; padding: 0; color: inherit; }
+  .tokens dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .tokens dd { margin: 0.25rem 0 0; color: var(--text-2); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Digital Gloss Landing Page — Session Summary</h1>
+  <p class="meta">
+    Project folder: <code>digital-gloss-website/</code><br>
+    Files: <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>
+  </p>
+
+  <h2>What we built</h2>
+  <p>
+    A single-page marketing site for Digital Gloss, an agency offering web
+    development, digital marketing, and AI solutions. Sections: hero,
+    services (3 disciplines), 4-step process, pull-quote statement, contact,
+    footer.
+  </p>
+
+  <h2>Design history</h2>
+  <ol>
+    <li>
+      <strong>First pass — "wet paint" identity.</strong> Warm paper
+      background, chunky Anton display type, neubrutalist color-block cards
+      (lacquer red / acid lime / cobalt), cursor-tracked gloss/shine effect
+      as the signature element, tied literally to the "Gloss" name.
+    </li>
+    <li>
+      <strong>Contrast/accessibility fixes.</strong> Deepened the lacquer
+      red token (<code>#E63D1F</code> → <code>#D93815</code>) so white text
+      cleared WCAG AA (4.5:1) against it. Removed an opacity-dimmed hero
+      subhead that hurt legibility for no visual gain. Hid the decorative
+      hero streak graphic on mobile where it was cutting through the
+      headline.
+    </li>
+    <li>
+      <strong>Full style pivot — dark/glass identity.</strong> At the
+      user's request, rebuilt to match the visual register of tequila.ae (a
+      Dubai web agency site): near-black background (<code>#0D0D0D</code>),
+      light-weight Instrument Sans display headlines paired with elegant
+      Instrument Serif lede paragraphs, fully pill-shaped buttons,
+      frosted-glass service cards with a cursor-tracked color glow (cyan /
+      amber / violet per discipline), and ambient blurred glow orbs
+      standing in for the reference site's glossy 3D-render imagery (built
+      as original CSS art, not copied assets). Also fixed a real
+      performance issue found along the way: the sticky nav's
+      <code>backdrop-filter: blur()</code> was forcing expensive repaints
+      on every scroll frame — swapped for a solid translucent background.
+    </li>
+    <li>
+      <strong>Small polish requests.</strong> CTA copy changed from "Start
+      a project" to "Get a free quote" (nav + hero). Contact email set to
+      <code>inquires@digitalgloss.com</code>. Nav logo doubled in size
+      (1.05rem → 2.1rem).
+    </li>
+  </ol>
+
+  <h2>Current design tokens (styles.css)</h2>
+  <dl class="tokens">
+    <dt>Colors</dt>
+    <dd>
+      Ink <code>#0D0D0D</code>, raised surface <code>#141414</code>, white
+      text with 70%/45% translucent tiers, hairline borders at 12% white.
+      Accent glows: cyan <code>#5EE7F5</code>, violet <code>#9B87F5</code>,
+      amber <code>#FFA45C</code>.
+    </dd>
+    <dt>Type</dt>
+    <dd>
+      Instrument Sans (display/UI, weights 300–600), Instrument Serif (lede
+      paragraphs, pull-quotes), both via Google Fonts.
+    </dd>
+    <dt>Components</dt>
+    <dd>
+      Pill buttons (<code>--pill: 999px</code>), glass cards
+      (<code>--radius: 20px</code>, 1px hairline border, radial glow on
+      hover).
+    </dd>
+  </dl>
+
+  <h2>How to preview locally</h2>
+  <pre><code>cd digital-gloss-website
+python3 -m http.server 8073
+# open http://localhost:8073/index.html</code></pre>
+
+  <h2>Open items / possible next steps</h2>
+  <ul>
+    <li>
+      No real portfolio/testimonial content yet — the statement section is
+      a point-of-view line, not a case study, since no real client data
+      was available.
+    </li>
+    <li>Contact form is a <code>mailto:</code> link only — no backend form.</li>
+    <li>Favicon not set.</li>
+  </ul>
+</main>
+</body>
+</html>

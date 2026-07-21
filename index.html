@@ -3,170 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Gloss Landing Page — Session Summary</title>
-<style>
-  :root {
-    --ink: #0D0D0D;
-    --paper: #F7F5F0;
-    --text-2: #55534C;
-    --hairline: #E4E1D8;
-    --accent: #D93815;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    line-height: 1.6;
-  }
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem 6rem;
-  }
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin: 0 0 0.5rem;
-  }
-  .meta {
-    color: var(--text-2);
-    font-size: 0.95rem;
-    margin: 0 0 3rem;
-  }
-  .meta code {
-    background: var(--hairline);
-    padding: 0.1em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  h2 {
-    font-size: 1.3rem;
-    margin: 3rem 0 1rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--hairline);
-  }
-  h2:first-of-type { border-top: none; padding-top: 0; }
-  p { margin: 0 0 1rem; }
-  ol, ul { padding-left: 1.3rem; }
-  li { margin-bottom: 0.9rem; }
-  strong { color: var(--ink); }
-  code {
-    background: var(--hairline);
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-family: "SF Mono", Menlo, monospace;
-  }
-  pre {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 1.25rem 1.5rem;
-    border-radius: 10px;
-    overflow-x: auto;
-    font-size: 0.9rem;
-  }
-  pre code { background: none; padding: 0; color: inherit; }
-  .tokens dt {
-    font-weight: 600;
-    margin-top: 1rem;
-  }
-  .tokens dd { margin: 0.25rem 0 0; color: var(--text-2); }
-  a { color: var(--accent); }
-</style>
+<title>Digital Gloss — Web, Marketing &amp; AI, One Team</title>
+<meta name="description" content="Digital Gloss builds sites that load fast, campaigns that convert, and AI tools that do the boring parts for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="grain"></div>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="wordmark" href="#top">Digital<span>Gloss</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="#contact">Get a free quote</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
 <main>
-  <h1>Digital Gloss Landing Page — Session Summary</h1>
-  <p class="meta">
-    Project folder: <code>digital-gloss-website/</code><br>
-    Files: <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>
-  </p>
+  <!-- HERO -->
+  <section class="hero" id="top-hero">
+    <div class="glow-field" aria-hidden="true">
+      <span class="glow glow-cyan"></span>
+      <span class="glow glow-violet"></span>
+      <span class="glow glow-amber"></span>
+    </div>
 
-  <h2>What we built</h2>
-  <p>
-    A single-page marketing site for Digital Gloss, an agency offering web
-    development, digital marketing, and AI solutions. Sections: hero,
-    services (3 disciplines), 4-step process, pull-quote statement, contact,
-    footer.
-  </p>
+    <div class="hero-inner">
+      <p class="eyebrow">Web design &amp; development studio, remote-first</p>
+      <h1 class="hero-headline">Brands built to<br>outperform, not just exist.</h1>
+      <p class="hero-lede">
+        Digital Gloss designs and builds the sites, campaigns, and AI-driven
+        tools that let ambitious companies run leaner and grow faster —
+        work judged by what it does for the business, not how it looks in a deck.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get a free quote</a>
+        <a href="#services" class="btn btn-ghost">See what we do</a>
+      </div>
+    </div>
+  </section>
 
-  <h2>Design history</h2>
-  <ol>
-    <li>
-      <strong>First pass — "wet paint" identity.</strong> Warm paper
-      background, chunky Anton display type, neubrutalist color-block cards
-      (lacquer red / acid lime / cobalt), cursor-tracked gloss/shine effect
-      as the signature element, tied literally to the "Gloss" name.
-    </li>
-    <li>
-      <strong>Contrast/accessibility fixes.</strong> Deepened the lacquer
-      red token (<code>#E63D1F</code> → <code>#D93815</code>) so white text
-      cleared WCAG AA (4.5:1) against it. Removed an opacity-dimmed hero
-      subhead that hurt legibility for no visual gain. Hid the decorative
-      hero streak graphic on mobile where it was cutting through the
-      headline.
-    </li>
-    <li>
-      <strong>Full style pivot — dark/glass identity.</strong> At the
-      user's request, rebuilt to match the visual register of tequila.ae (a
-      Dubai web agency site): near-black background (<code>#0D0D0D</code>),
-      light-weight Instrument Sans display headlines paired with elegant
-      Instrument Serif lede paragraphs, fully pill-shaped buttons,
-      frosted-glass service cards with a cursor-tracked color glow (cyan /
-      amber / violet per discipline), and ambient blurred glow orbs
-      standing in for the reference site's glossy 3D-render imagery (built
-      as original CSS art, not copied assets). Also fixed a real
-      performance issue found along the way: the sticky nav's
-      <code>backdrop-filter: blur()</code> was forcing expensive repaints
-      on every scroll frame — swapped for a solid translucent background.
-    </li>
-    <li>
-      <strong>Small polish requests.</strong> CTA copy changed from "Start
-      a project" to "Get a free quote" (nav + hero). Contact email set to
-      <code>inquires@digitalgloss.com</code>. Nav logo doubled in size
-      (1.05rem → 2.1rem).
-    </li>
-  </ol>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2 class="section-title">Three disciplines.<br>One team that delivers.</h2>
+    </div>
 
-  <h2>Current design tokens (styles.css)</h2>
-  <dl class="tokens">
-    <dt>Colors</dt>
-    <dd>
-      Ink <code>#0D0D0D</code>, raised surface <code>#141414</code>, white
-      text with 70%/45% translucent tiers, hairline borders at 12% white.
-      Accent glows: cyan <code>#5EE7F5</code>, violet <code>#9B87F5</code>,
-      amber <code>#FFA45C</code>.
-    </dd>
-    <dt>Type</dt>
-    <dd>
-      Instrument Sans (display/UI, weights 300–600), Instrument Serif (lede
-      paragraphs, pull-quotes), both via Google Fonts.
-    </dd>
-    <dt>Components</dt>
-    <dd>
-      Pill buttons (<code>--pill: 999px</code>), glass cards
-      (<code>--radius: 20px</code>, 1px hairline border, radial glow on
-      hover).
-    </dd>
-  </dl>
+    <div class="cards">
+      <article class="glass-card" data-shine data-glow="cyan">
+        <div class="card-glow"></div>
+        <p class="card-tag">Web Development</p>
+        <h3>Sites built to sell, not just sit there.</h3>
+        <ul>
+          <li>Custom builds &amp; redesigns</li>
+          <li>E-commerce &amp; booking flows</li>
+          <li>Speed &amp; SEO baked in from day one</li>
+        </ul>
+      </article>
 
-  <h2>How to preview locally</h2>
-  <pre><code>cd digital-gloss-website
-python3 -m http.server 8073
-# open http://localhost:8073/index.html</code></pre>
+      <article class="glass-card" data-shine data-glow="amber">
+        <div class="card-glow"></div>
+        <p class="card-tag">Digital Marketing</p>
+        <h3>Marketing that earns attention, not just spends budget.</h3>
+        <ul>
+          <li>Paid social &amp; search campaigns</li>
+          <li>Content &amp; SEO strategy</li>
+          <li>Analytics you can actually read</li>
+        </ul>
+      </article>
 
-  <h2>Open items / possible next steps</h2>
-  <ul>
-    <li>
-      No real portfolio/testimonial content yet — the statement section is
-      a point-of-view line, not a case study, since no real client data
-      was available.
-    </li>
-    <li>Contact form is a <code>mailto:</code> link only — no backend form.</li>
-    <li>Favicon not set.</li>
-  </ul>
+      <article class="glass-card" data-shine data-glow="violet">
+        <div class="card-glow"></div>
+        <p class="card-tag">AI Solutions</p>
+        <h3>AI that does the busywork, so your team doesn't have to.</h3>
+        <ul>
+          <li>Custom chatbots &amp; support tools</li>
+          <li>Workflow automation</li>
+          <li>Internal tools built around your data</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 class="section-title">Four steps.<br>No mystery in between.</h2>
+    </div>
+
+    <ol class="process-list">
+      <li>
+        <span class="process-num">01</span>
+        <div>
+          <h3>Discovery</h3>
+          <p>We dig into your business, your customers, and what's actually broken before we touch a single pixel.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">02</span>
+        <div>
+          <h3>Build</h3>
+          <p>Design and development happen in the open — you see progress every week, not just at the end.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">03</span>
+        <div>
+          <h3>Launch</h3>
+          <p>We ship, test against real traffic, and fix what breaks before your customers ever notice.</p>
+        </div>
+      </li>
+      <li>
+        <span class="process-num">04</span>
+        <div>
+          <h3>Grow</h3>
+          <p>Ongoing marketing and AI tooling keep compounding after launch — growth doesn't stop at go-live.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <p class="statement-text">
+      Most agencies pick a lane. We figured out the lanes all lead
+      to the same place — <em>a brand people actually remember.</em>
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="glow-field" aria-hidden="true">
+      <span class="glow glow-violet"></span>
+      <span class="glow glow-cyan"></span>
+    </div>
+    <div class="contact-inner">
+      <p class="eyebrow">Let's talk</p>
+      <h2 class="contact-title">Got a project?<br>Let's talk it through.</h2>
+      <p class="contact-sub">Tell us what you're building. We'll tell you honestly if we're the right fit.</p>
+      <a href="mailto:inquires@digitalgloss.com" class="btn btn-primary btn-large">inquires@digitalgloss.com</a>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="wordmark wordmark-small" href="#top">Digital<span>Gloss</span></a>
+    <nav class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Digital Gloss. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
